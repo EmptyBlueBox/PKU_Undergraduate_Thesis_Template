@@ -298,7 +298,7 @@
 ) = {
   set text(weight: "regular", font: 字体.宋体, size: 字号.小四, lang: "zh")
   
-  set heading(numbering: chinesenumbering)
+  set heading(numbering: "1.")
   set list(indent: 2em)
   set enum(indent: 2em)
   
@@ -395,7 +395,6 @@
       rawcounter.update(())
       equationcounter.update(())
 
-      set align(center)
       set strong()
       sizedheading(it, 字号.三号)
     } else {
