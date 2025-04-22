@@ -38,9 +38,13 @@
 
 #let page_start = state("page_start", false)
 
-#let change_appendix() = {
+#let appendix_start() = {
   appendix_mode.update(true)
   counter(heading).update(0)
+}
+
+#let appendix_end() = {
+  appendix_mode.update(false)
 }
 
 #let start_page_counting() = {
@@ -50,11 +54,10 @@
 }
 
 #let stop_page_counting() = {
-  
-  
   pagebreak(weak: true)
   page_start.update(false)
 }
+
 #let chinesenumbering(..nums, location: none, brackets: false) = {
   let use_appendix_mode = if location != none {
     appendix_mode.at(location)
@@ -91,4 +94,3 @@ context {
     ] 
   }
 }
-

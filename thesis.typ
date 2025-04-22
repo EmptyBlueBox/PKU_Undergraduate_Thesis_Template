@@ -70,7 +70,7 @@ Typst is an emerging typesetting tool designed to offer simple, efficient, and p
 
 The core advantage of Typst lies in its intuitive syntax and powerful typesetting engine. Users can define document structures, styles, and content using a programming-like approach, making the typesetting of complex documents more straightforward. Additionally, Typst supports real-time preview functionality, enabling users to see the typesetting effects immediately during the editing process, thereby improving work efficiency.
 
-Typst also boasts high extensibility and flexibility. Through a system of plugins and templates, users can customize typesetting rules to meet various needs. Whether it’s academic papers, business reports, or personal projects, Typst can deliver professional-grade typesetting results.
+Typst also boasts high extensibility and flexibility. Through a system of plugins and templates, users can customize typesetting rules to meet various needs. Whether it's academic papers, business reports, or personal projects, Typst can deliver professional-grade typesetting results.
 
 In summary, Typst is a user-friendly yet professional typesetting tool suitable for a wide range of document creation needs. Its introduction provides users with a new typesetting experience, making the typesetting process more enjoyable and efficient.
 
@@ -528,9 +528,16 @@ $ lim_x =
 
 - 参考文献格式，特别是中文参考文献的格式不完全符合学校有关规定。#link("https://discord.com/channels/1054443721975922748/1094796790559162408/1094928907880386662", "Discord 上的这个对话")显示，Typst 有关功能还在开发中。待有关接口对外开放后，本模板将会进行相应的适配。
 
+#pagebreak()
+#heading(level: 1, numbering: none, outlined: true)[参考文献] <reference>
+
+// 参考文献之前需要更改一下语言，因为文章中图表格的中文名称是设置typst为中文得到的
+// 如果就是需要中文参考文献格式可以不更改
+#set text(lang: "en")
+#bibliography(title:none, "ref.bib")
 
 // 这之后的章节都是附录，如无附录可以删掉
-#change_appendix()
+#appendix_start()
 
 = 关于 Typst <about>
 
@@ -633,26 +640,15 @@ $ vec(overline(underbracket(underline(1 + 2) + overbrace(3 + dots.c + 10, "large
 
 #include "changelog.typ"
 
+#appendix_end()
 
-= 参考文献 <reference>
-
-// 参考文献之前需要更改一下语言，因为文章中图表格的中文名称是设置typst为中文得到的
-// 如果就是需要中文参考文献格式可以不更改
-#set text(lang: "en")
-#bibliography(title:none, "ref.bib")
-
-
-= 致谢 <thanks>
+#pagebreak()
+#heading(level: 1, numbering: none, outlined: true)[致谢] <thanks>
 
 感谢Typst开发者和原PhD论文模板开发者
 
 // DOCUMENT END:标记文章结束，页面计数停止
 #doc_end()
 
-
 // 原创性与版权声明
-
-// there may be a bug, I can not include it with a page (with pagebreak in the doc_end)
-
-#page(numbering: none, header: none, footer: none)[]
 #Statement(2024, 5, 15, teacher_sign : image("./images/老师签名.png"), my_sign: image("./images/本人签名.png"))

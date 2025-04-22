@@ -321,8 +321,6 @@
     footer: foot_numbering(),
   )
 
-  show <reference> : set heading(numbering: none)
-  show <thanks> : set heading(numbering: none)
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
   set par(leading: linespacing)
@@ -383,8 +381,11 @@
     set align(top)
     if it.level == 1 {
       
-      pagebreak(weak:true)
-
+      // 仅对带编号的一级标题（章节）进行分页
+      // Don't pagebreak for unnumbered level 1 headings like thanks/reference
+      if it.numbering != none {
+        pagebreak(weak:true)
+      }
 
       if it.numbering != none {
         chaptercounter.step()
@@ -395,7 +396,8 @@
       rawcounter.update(())
       equationcounter.update(())
 
-      // set align(center) // 注释掉居中对齐
+      // Apply bold styling for level 1 headings by default
+      // (show <thanks> rule overrides alignment and adds semibold)
       set strong()
       sizedheading(it, 字号.三号)
     } else {

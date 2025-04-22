@@ -67,15 +67,12 @@
 #let Statement(year, month, day, teacher_sign : none, my_sign: none) ={
   pagebreak()
   block()[
-    #ClaimTitle([北京大学学位论文原创性声明和使用授权说明])
-    #grid(
-      rows: (1fr, auto, 2fr, auto, 2fr),
-      [],
-      [#OriginalityStatement(year, month, day, my_sign : my_sign)],
-      [],
-      [#TermofUseandAuthorization(year, month, day, teacher_sign : teacher_sign, my_sign : my_sign)],
-      []
-    )
+    #align(center)[
+      #heading(level: 1, numbering: none, outlined: true)[北京大学学位论文原创性声明和使用授权说明]
+    ]
+    #OriginalityStatement(year, month, day, my_sign : my_sign)
+    #v(2em)
+    #TermofUseandAuthorization(year, month, day, teacher_sign : teacher_sign, my_sign : my_sign)
   ]
 }
 
