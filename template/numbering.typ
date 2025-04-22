@@ -63,7 +63,7 @@
   }
   if not use_appendix_mode {
     if nums.pos().len() == 1 {
-      text()[第#chinesenumber(nums.pos().first(), standalone: true)章]
+      numbering("1.", nums.pos().first())
     } else {
       numbering(if brackets { "(1.1)" } else { "1.1" }, ..nums)
     }
