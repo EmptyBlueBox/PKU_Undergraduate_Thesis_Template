@@ -24,7 +24,7 @@
   宋体: ("Times New Roman", "SimSun"),
   黑体: ("Times New Roman", "SimHei"),
   楷体: ("Times New Roman", "KaiTi"),
-  代码: ("Consolas"),
+  代码: ("JetBrains Mono"),
 )
 
 #let style_size(style, size, content) = {

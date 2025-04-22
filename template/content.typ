@@ -10,8 +10,8 @@
 
   set text(font: 字体.黑体, size : 字号.小四)
   set align(top)
-  locate(it => {
-    let elements = query(heading.where(outlined: true).after(it, inclusive : true))
+  context {
+    let elements = query(heading.where(outlined: true))
     set par(leading: 1em, first-line-indent: 0em)
     for el in elements {
 
@@ -27,8 +27,8 @@
           h(1em * (el.level - 1 ))
         }
         if maybe_number != none {
-          style(styles => {
-            let width = measure(maybe_number, styles).width
+          {
+            let width = measure(maybe_number).width
             box(
               width: lengthceil(width),
               link(el.location(), if el.level == 1 {
@@ -37,7 +37,7 @@
                 maybe_number
               })
             )
-          })
+          }
         }
 
         link(el.location(), if el.level == 1 {
@@ -69,7 +69,7 @@
 
       line
     }
-  })
+  }
 }
 
 #let TableOfContent = [

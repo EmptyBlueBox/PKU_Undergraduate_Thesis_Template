@@ -55,9 +55,13 @@
   pagebreak(weak: true)
   page_start.update(false)
 }
-#let chinesenumbering(..nums, location: none, brackets: false) = locate(loc => {
-  let actual_loc = if location == none { loc } else { location }
-  if not appendix_mode.at(actual_loc) {
+#let chinesenumbering(..nums, location: none, brackets: false) = {
+  let use_appendix_mode = if location != none {
+    appendix_mode.at(location)
+  } else {
+    appendix_mode.get()
+  }
+  if not use_appendix_mode {
     if nums.pos().len() == 1 {
       text()[第#chinesenumber(nums.pos().first(), standalone: true)章]
     } else {
@@ -71,20 +75,20 @@
     }
   }
   h(0.5em)
-})
+}
 
 #let foot_numbering() = {
-locate(loc => {
+context {
     [
-    #if not page_start.at(loc)  {
+    #if not page_start.get() {
     } else {
     
       set text(size: 字号.五号, font : 字体.黑体, weight: "regular")
       set align(center)
-      text[第 #counter(page).at(loc).first() 页] 
+      text[第 #counter(page).display() 页] 
     }
     #label("__footer__")
     ] 
-  })
+  }
 }
 

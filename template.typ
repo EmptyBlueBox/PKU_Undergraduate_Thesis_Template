@@ -234,7 +234,7 @@
     content_aligns.push(aligns.at(calc.rem(i, aligns.len())))
   }
 
-  return figure(
+  figure(
     block(
       width: width,
       grid(
@@ -309,17 +309,15 @@
       left : 2cm,
       bottom : 2.5cm
     ),
-    header: locate(loc => {
-      if not doc_mode.at(loc) {
-        return
+    header: context {
+      if doc_mode.get() {
+        set align(center)
+        set text(font: 字体.宋体, size: 字号.小四, weight: "regular")
+        ctitle
+        v(-1em)
+        line(length: 100%)
       }
-      set align(center)
-      set text(font: 字体.宋体, size: 字号.小四, weight: "regular")
-      ctitle
-      v(-1em)
-      line(length: 100%)
-
-     }),
+    },
     footer: foot_numbering(),
   )
 
@@ -327,7 +325,7 @@
   show <thanks> : set heading(numbering: none)
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
-  show par: set block(spacing: linespacing)
+  set par(leading: linespacing)
   show raw: set text(font: 字体.代码)
 
   show figure: it => [
@@ -358,14 +356,14 @@
     }
   ]
   set math.equation(
-    numbering: (..nums) => locate(loc => {
+    numbering: (..nums) => context {
       set text(font: 字体.宋体)
-      if appendixcounter.at(loc).first() < 10 {
-        numbering("(1.1)", chaptercounter.at(loc).first(), ..nums)
+      if appendixcounter.get().first() < 10 {
+        numbering("(1.1)", chaptercounter.get().first(), ..nums)
       } else {
-        numbering("(A.1)", chaptercounter.at(loc).first(), ..nums)
+        numbering("(A.1)", chaptercounter.get().first(), ..nums)
       }
-    })
+    }
   )
 
   show heading: it => {
@@ -467,16 +465,14 @@
 
 
   set par(first-line-indent: 2em, leading: 1em)
-  show par : it => locate(
-    loc => {
-      if doc_mode.at(loc) {
-        v(0.1em)
-        it
-      } else {
-        it
-      }
+  show par: it => context {
+    if doc_mode.get() {
+      v(0.1em)
+      it
+    } else {
+      it
     }
-  )
+  }
   set align(start)
   // 正文显示部分
   doc
