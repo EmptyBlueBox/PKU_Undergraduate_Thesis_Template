@@ -293,7 +293,6 @@
 
 #let UndergraduateThesis(
   ctitle: "",
-  linespacing: 2.0em,
   doc,
 ) = {
   set text(weight: "regular", font: 字体.宋体, size: 字号.小四, lang: "zh")
@@ -323,7 +322,7 @@
 
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
-  set par(leading: linespacing)
+  set par(leading: 1em, spacing: 1em)
   show raw: set text(font: 字体.代码)
 
   show figure: it => [
@@ -466,7 +465,7 @@
   }
 
 
-  set par(first-line-indent: 2em, leading: 1em)
+  set par(first-line-indent: 2em, leading: 2em, spacing: 2em)
   show par: it => context {
     if doc_mode.get() {
       v(0.1em)

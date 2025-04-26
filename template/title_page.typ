@@ -26,6 +26,7 @@
     )
   ]
   page(numbering: none, header: none, footer: none)[
+    #set par(leading: 1em, spacing: 1em)
     #set align(center)
     #box(
       grid(

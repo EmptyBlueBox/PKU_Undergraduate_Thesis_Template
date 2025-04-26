@@ -11,7 +11,7 @@
     #set align(top + start)
     #abstract_title(abstract_name)
     #set text(font: 字体.宋体, size: 字号.小四)
-    #set par(justify: true, first-line-indent: 2em, leading: 1em)
+    #set par(justify: true, first-line-indent: 2em, leading: 2em, spacing: 2em)
     #abstract
 
     #v(1em)

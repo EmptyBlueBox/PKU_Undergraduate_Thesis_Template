@@ -11,7 +11,7 @@
 
     #ClaimTitle([版权声明])
     #v(10pt)
-    #par(justify: true, leading: 1em)[
+    #par(justify: true, leading: 2em, spacing: 2em)[
       #set text(font : 字体.宋体, size : 字号.小四)
       #set align(start + top)
       任何收存和保管本论文各种版本的单位和个人，未经本论文作者同意，不得将本论文转借他人，亦不得随意复制、抄录、拍照或以任何方式传播。否则，引起有碍作者著作权之问题，将可能承担法律责任。
