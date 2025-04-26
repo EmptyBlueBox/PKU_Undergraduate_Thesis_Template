@@ -298,8 +298,8 @@
   set text(weight: "regular", font: 字体.宋体, size: 字号.小四, lang: "zh")
   
   set heading(numbering: chinesenumbering)
-  set list(indent: 2em)
-  set enum(indent: 2em)
+  set list(indent: 1em)
+  set enum(indent: 1em)
   
   set page("a4",
     margin: (
@@ -322,7 +322,7 @@
 
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
-  set par(leading: 1em, spacing: 1em)
+  // set par(leading: 1em, spacing: 1em) // 设置代码段落间距
   show raw: set text(font: 字体.代码)
 
   show figure: it => [
@@ -343,7 +343,6 @@
         
         #it.caption
       ]
-      
     } else if it.kind == "code" {
       it.body
       [
