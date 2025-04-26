@@ -293,7 +293,7 @@
 
 #let UndergraduateThesis(
   ctitle: "",
-  linespacing: 1em,
+  linespacing: 2.0em,
   doc,
 ) = {
   set text(weight: "regular", font: 字体.宋体, size: 字号.小四, lang: "zh")
@@ -304,9 +304,9 @@
   
   set page("a4",
     margin: (
-      top : 2.5cm,
-      right : 2cm,
-      left : 2cm,
+      top : 3cm,
+      right : 2.6cm,
+      left : 2.6cm,
       bottom : 2.5cm
     ),
     header: context {
