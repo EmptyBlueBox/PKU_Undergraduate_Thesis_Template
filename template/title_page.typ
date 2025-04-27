@@ -49,7 +49,7 @@
       rows: 2,
       column-gutter: 1em,
       row-gutter: 1em,
-      [#text(font: 字体.宋体, size : 字号.二号)[题目]], [#title(chinese_title)],
+      [#text(font: 字体.宋体, size : 字号.二号)[题目：]], [#title(chinese_title)],
       [],[#title(english_title)]
     )]
     #v(10%)

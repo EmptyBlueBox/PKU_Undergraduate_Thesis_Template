@@ -464,7 +464,7 @@
   }
 
 
-  set par(first-line-indent: 2em, leading: 2em, spacing: 2em)
+  set par(first-line-indent: 2em, leading: 1em, spacing: 2em)
   show par: it => context {
     if doc_mode.get() {
       v(0.1em)
