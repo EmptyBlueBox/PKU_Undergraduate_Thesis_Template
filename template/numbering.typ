@@ -80,6 +80,10 @@
   h(0.5em)
 }
 
+#let figure_numbering(..nums) = context {
+  numbering("1.1", counter("chapter").at(here()).first(), ..nums)
+}
+
 #let foot_numbering() = {
 context {
     [
