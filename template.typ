@@ -298,6 +298,7 @@
   set text(weight: "regular", font: 字体.宋体, size: 字号.小四, lang: "zh")
   
   set heading(numbering: chinesenumbering)
+  set figure(numbering: figure_numbering)
   set list(indent: 1em)
   set enum(indent: 1em)
   
