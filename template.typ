@@ -314,7 +314,7 @@
         set align(center)
         set text(font: 字体.宋体, size: 字号.小五, weight: "regular")
         ctitle
-        v(-1.5em)
+        v(-0.8em)
         line(length: 100%)
       }
     },
@@ -465,7 +465,7 @@
   }
 
 
-  set par(first-line-indent: 2em, leading: 1em, spacing: 2em)
+  set par(first-line-indent: 2em, leading: 1.25em)
   show par: it => context {
     if doc_mode.get() {
       v(0.1em)
