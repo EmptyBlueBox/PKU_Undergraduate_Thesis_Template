@@ -6,9 +6,6 @@
 }
 #let CopyrightClaim = [
   #page(numbering: none, header: none, footer: none)[
-
-    
-
     #ClaimTitle([版权声明])
     #v(10pt)
     #par(justify: true, leading: 2em, spacing: 2em)[
@@ -33,8 +30,6 @@
     #set text(font : 字体.宋体, size : 字号.小四)
     #set align(start + top)
     本人郑重声明：所呈交的学位论文，是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不含任何其他个人或集体已经发表或撰写过的作品或成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本声明的法律结果由本人承担。
-
-
     #v(4em)
     #set align(right)
     论文作者签名： #h(0.5em) #box(height: 3em, baseline: 30%)[#my_sign]
@@ -58,7 +53,7 @@
 
     #v(4em)
     #set align(right)
-    论文作者签名： #box(height: 3em, baseline: 30%)[#my_sign] #h(1em) 导师签名：#box(height: 3em, baseline: 30%)[#teacher_sign]
+    论文作者签名： #box(height: 3em, baseline: 30%)[#if my_sign == none {"                    "} else {my_sign}] #h(1em) 导师签名：#box(height: 3em, baseline: 30%)[#if teacher_sign == none {"                    "} else {teacher_sign}]
 
     日期： #year 年 #month 月 #day 日
   ]
@@ -75,4 +70,3 @@
     #TermofUseandAuthorization(year, month, day, teacher_sign : teacher_sign, my_sign : my_sign)
   ]
 }
-

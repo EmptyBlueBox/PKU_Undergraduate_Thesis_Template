@@ -1,20 +1,20 @@
 #import "font.typ": *
 
 #let CheckSheet(
-  name : "张三",
-  studentid : "20000xxxxx",
-  school : "信息科学与技术学院",
-  major : "信息与计算科学",
-  supervisor : "李四",
+  name : "小北",
+  studentid : "21000xxxxx",
+  school : "信息科学技术学院",
+  major : "计算机科学与技术",
+  supervisor : "Everyone",
   department : "计算机学院",
-  grade : "优",
-  title : "助理教授",
+  grade : none,
+  title : "教授",
   chinese_title : "北京大学学位论文 Typst 模板",
   sign_pic: none,
   english_title : "Typst Template for Peking University Dissertations",
-  year : 2024,
-  month : 5,
-  day : 12,
+  year : none,
+  month : none,
+  day : none,
   supervisor_comment,
 ) = {
   set text(font: 字体.宋体, size : 字号.小四)
@@ -28,7 +28,7 @@
     #align(top + start)[#comment]
 
     #align(right + bottom, [
-      导师签名: #h(0.5em) #box(baseline: 30%, height: 3em)[#sign_pic]
+      导师签名: #h(0.5em) #box(baseline: 30%, height: 3em)[#if sign_pic == none {"                    "} else {sign_pic}]
       #v(1em)
       #h(2em) #year 年 #month 月 #day 日
     ])
