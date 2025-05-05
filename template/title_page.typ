@@ -2,12 +2,12 @@
 #let TitlePage(
   chinese_title: "北京大学本科生typst论文模板",
   english_title: "typst template for undergraduate in PKU",
-  name : "十一",
-  studentid : "20000xxxxx",
-  department : "信息科学与技术学院",
-  major : "信息与计算科学",
-  supervisor_name : "11",
-  year_and_month : "二〇二四年五月"
+  name : "小北",
+  studentid : "21000xxxxx",
+  department : "信息科学技术学院",
+  major : "计算机科学与技术",
+  supervisor_name : "Everyone",
+  year_and_month : "二〇二五年五月"
 ) = {
   let fieldname(name) = [
     #set align(right + top)

@@ -12,23 +12,23 @@
 #TitlePage(
   chinese_title: [Typst：世界前沿的排版系统],
   english_title: [Typst: State-of-art \ Formatting System],
-  name : "十一",
-  studentid : "20000xxxxx",
-  department : "信息科学与技术学院",
-  major : "信息与计算科学",
-  supervisor_name : "斯公子",
-  year_and_month : "二零二四年六月"
+  name : "小北",
+  studentid : "21000xxxxx",
+  department : "信息科学技术学院",
+  major : "计算机科学与技术",
+  supervisor_name : "Everyone",
+  year_and_month : "二零二五年五月"
 ) <title-page>
 
 
 // 导师评价
 // CheckSheet参数全部必填
 #CheckSheet(
-  name : "十一",
-  studentid : "20000xxxxx",
-  school : "信息科学与技术学院",
-  major : "信息与计算科学",
-  supervisor : "斯公子",
+  name : "小北",
+  studentid : "21000xxxxx",
+  school : "信息科学技术学院",
+  major : "计算机科学与技术",
+  supervisor : "Everyone",
   department : "计算机学院",
   grade : "中等",
   title : "助理教授",
@@ -505,6 +505,24 @@ Typst 支持 BibLaTeX 格式的 `.bib` 文件，同时也新定义了一种基�
 注意代码中的 `"ref.bib"` 也可以是一个数组，比如 `("ref1.bib", "ref2.bib")`。
 
 = 理论
+
+== 理论：第二章的图片与表格
+
+#figure(
+  image("images/undergraduate-cover.png", width: 50%),
+  caption: "Typst 网页版界面",
+) <test>
+
+#booktab(
+  width: 100%,
+  aligns: (left, center, right),
+  columns: (1fr, 1fr, 1fr),
+  caption: [`booktab` 示例],
+  [左对齐], [居中], [右对齐],
+  [4], [5], [6],
+  [7], [8], [9],
+  [10], [], [11],
+) <booktab2>
 
 == 理论一 <theory1>
 
