@@ -323,7 +323,7 @@
 
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
-  // set par(leading: 1em, spacing: 1em) // 设置代码段落间距
+  set par(first-line-indent: 2em, leading: 1.25em)
   show raw: set text(font: 字体.代码)
 
   show figure: it => [
@@ -338,12 +338,11 @@
         #it.caption
       ]
     } else if it.kind == table {
-      it.body
       [
         #set text(字号.五号)
-        
         #it.caption
       ]
+      it.body
     } else if it.kind == "code" {
       it.body
       [
@@ -464,8 +463,6 @@
     }
   }
 
-
-  set par(first-line-indent: 2em, leading: 1.25em)
   show par: it => context {
     if doc_mode.get() {
       v(0.1em)
@@ -475,6 +472,5 @@
     }
   }
   set align(start)
-  // 正文显示部分
   doc
 }
