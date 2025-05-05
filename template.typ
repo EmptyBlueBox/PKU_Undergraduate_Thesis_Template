@@ -312,9 +312,9 @@
     header: context {
       if doc_mode.get() {
         set align(center)
-        set text(font: 字体.宋体, size: 字号.小四, weight: "regular")
+        set text(font: 字体.宋体, size: 字号.小五, weight: "regular")
         ctitle
-        v(-1em)
+        v(-1.5em)
         line(length: 100%)
       }
     },
