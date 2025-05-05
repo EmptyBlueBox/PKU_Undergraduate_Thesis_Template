@@ -1,5 +1,7 @@
 # Peking University Undergraduate Thesis Template
 
+![PKUTHSS-Typst](./images/undergraduate-cover.png)
+
 Typst template for **undergraduate theses** at Peking University (PKU).
 
 此版本已被修改自 [pkuthss-typst-undergraduate](https://github.com/sigongzi/pkuthss-typst-undergraduate) and [PKU PhD thesis version](https://github.com/pku-typst/pkuthss-typst).
