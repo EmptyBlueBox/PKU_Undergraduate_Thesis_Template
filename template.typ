@@ -344,6 +344,7 @@
         #it.caption
       ]
       it.body
+      hide[""]
     } else if it.kind == "code" {
       it.body
       [
