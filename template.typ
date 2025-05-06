@@ -335,6 +335,7 @@
       linebreak()
       [
         #set text(字号.五号)
+        #v(-2.0em)
         #it.caption
       ]
     } else if it.kind == table {
