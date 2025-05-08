@@ -405,7 +405,8 @@
       set text(weight: "regular")
       if it.level == 2 {
         sizedheading(it, 字号.四号)
-      } else if it.level == 3 {
+      } else if it.level >= 3 {
+        set par(first-line-indent: 2em)
         sizedheading(it, 字号.中四)
       } else {
         sizedheading(it, 字号.小四)
