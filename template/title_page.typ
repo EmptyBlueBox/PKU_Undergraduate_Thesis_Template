@@ -58,11 +58,11 @@
       columns: 2,
       row-gutter: 1em,
       column-gutter: 1em,
-      fieldname([姓#h(2em)名]), term(name),
-      fieldname([学#h(2em)号]), term(studentid),
-      fieldname([院#h(2em)系]),term(department),
-      fieldname([专#h(2em)业]),term(major),
-      fieldname([导师姓名]), term(supervisor_name)
+      fieldname([姓#h(2em)名：]), term(name),
+      fieldname([学#h(2em)号：]), term(studentid),
+      fieldname([院#h(2em)系：]),term(department),
+      fieldname([专#h(2em)业：]),term(major),
+      fieldname([导师姓名：]), term(supervisor_name)
     ))
 
     #align(bottom)[
