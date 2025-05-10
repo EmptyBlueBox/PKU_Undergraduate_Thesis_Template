@@ -28,7 +28,7 @@
     #align(top + start)[#comment]
 
     #align(right + bottom, [
-      导师签名: #h(0.5em) #box(baseline: 30%, height: 3em)[#if sign_pic == none {"                    "} else {sign_pic}]
+      导师签名: #h(0.5em) #box(baseline: 30%, height: 3em)[#if sign_pic == none {"                            "} else {sign_pic}]
       #v(1em)
       #h(2em) #year 年 #month 月 #day 日
     ])

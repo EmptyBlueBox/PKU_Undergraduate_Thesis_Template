@@ -30,16 +30,16 @@
   major : "计算机科学与技术",
   supervisor : "Everyone",
   department : "计算机学院",
-  grade : "中等",
+  grade : none,
   title : "助理教授",
   chinese_title : "Typst：世界前沿的排版系统",
   english_title : "Typst: State-of-art Formatting System",
-  sign_pic : image("./images/老师签名.png"),
-  year : 2024,
+  sign_pic : none,
+  year : 2025,
   month : 5,
-  day : 15,
+  day : 13,
 )[
-这篇文章写得还行
+
 ] // end of check comment
 
 // Copyright
@@ -669,4 +669,4 @@ $ vec(overline(underbracket(underline(1 + 2) + overbrace(3 + dots.c + 10, "large
 #doc_end()
 
 // 原创性与版权声明
-#Statement(2024, 5, 15, teacher_sign : image("./images/老师签名.png"), my_sign: image("./images/本人签名.png"))
+#Statement(2024, 5, 15, teacher_sign : none, my_sign: none)
