@@ -304,9 +304,9 @@
   
   set page("a4",
     margin: (
-      top : 3cm,
-      right : 2.6cm,
-      left : 2.6cm,
+      top : 2.5cm,
+      right : 2.0cm,
+      left : 2.0cm,
       bottom : 2.5cm
     ),
     header: context {
@@ -323,7 +323,7 @@
 
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
-  set par(first-line-indent: 2em, leading: 1.25em)
+  set par(first-line-indent: 2em, leading: 1.20em)
   show raw: set text(font: 字体.代码)
 
   show figure: it => [
