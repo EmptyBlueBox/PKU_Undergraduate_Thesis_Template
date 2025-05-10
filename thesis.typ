@@ -17,7 +17,7 @@
   department : "信息科学技术学院",
   major : "计算机科学与技术",
   supervisor_name : "Everyone",
-  year_and_month : "二零二五年五月"
+  year_and_month : "二〇二五年五月"
 ) <title-page>
 
 
