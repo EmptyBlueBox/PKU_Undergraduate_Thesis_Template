@@ -2,7 +2,7 @@
 #let abstract_title(title) = {
   align(center + top)[
     #set text(font: 字体.黑体, size: 字号.三号)
-    #title  
+    #strong[#title]
   ]
 }
 
@@ -25,5 +25,5 @@
 }
 
 #let EnglishAbstract(keywords : [], abstract) = {
-  Abstract(keywords : keywords, "ABSTRACT","KEY WORDS:",", ", abstract)
+  Abstract(keywords : keywords, "ABSTRACT", "KEY WORDS:", ", ", abstract)
 }

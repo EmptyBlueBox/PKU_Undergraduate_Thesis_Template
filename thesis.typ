@@ -10,8 +10,8 @@
 // 封面修改后位本科生版本
 // TitlePage参数全部必填
 #TitlePage(
-  chinese_title: [Typst：世界前沿的排版系统],
-  english_title: [Typst: State-of-art \ Formatting System],
+  chinese_title: [#strong[Typst：世界前沿的排版系统]],
+  english_title: [#strong[Typst: State-of-art Formatting System]],
   name : "小北",
   studentid : "21000xxxxx",
   department : "信息科学技术学院",
