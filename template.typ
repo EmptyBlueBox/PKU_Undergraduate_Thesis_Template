@@ -323,7 +323,7 @@
 
   show strong: it => text(font: 字体.黑体, weight: "semibold", it.body)
   show emph: it => text(font: 字体.楷体, style: "italic", it.body)
-  set par(first-line-indent: 2em, leading: 1.20em)
+  set par(first-line-indent: (amount: 2em, all: true), leading: 1.20em)
   show raw: set text(font: 字体.代码)
 
   show figure: it => [
@@ -366,7 +366,7 @@
 
   show heading: it => {
     // Cancel indentation for headings
-    set par(first-line-indent: 0em)
+    set par(first-line-indent: (amount: 0em, all: true))
 
     let sizedheading(it, size) = [
       #set text(size : size, font : 字体.黑体)
